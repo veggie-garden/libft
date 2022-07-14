@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:53:56 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/13 21:22:48 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/14 10:53:23 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned int	i;
-	unsigned int	j;
-	char			*tmp;
-	char const		*str;
+	size_t		i;
+	size_t		j;
+	char		*tmp;
+	char const	*str;
 
 	i = 0;
 	j = 0;
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (dst);
 	while (tmp[j])
 		j++;
-	while (tmp[j] && str[i] && i + 1 < len)
+	while (i < len)
 	{
 		tmp[j] = str[i];
 		i++;

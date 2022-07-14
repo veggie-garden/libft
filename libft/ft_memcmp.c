@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:03:58 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/13 21:21:06 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/14 09:21:50 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
-	const char		*tmp1;
-	const char		*tmp2;
+	size_t		i;
+	const char	*tmp1;
+	const char	*tmp2;
 
 	i = 0;
 	tmp1 = s1;

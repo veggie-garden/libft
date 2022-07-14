@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:59:47 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/13 21:22:37 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/14 10:52:49 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int	i;
-	char			*tmp;
-	char const		*str;
+	size_t				i;
+	unsigned char		*tmp;
+	unsigned char const	*str;
 
 	i = 0;
-	tmp = dst;
-	str = src;
+	tmp = (unsigned char *)dst;
+	str = (unsigned char const *)src;
 	if (!dst)
 		return (0);
 	if (!n || dst == src)
 		return (dst);
-	while (str[i] && i + 1 < n)
+	while (i < n)
 	{
 		tmp[i] = str[i];
 		i++;

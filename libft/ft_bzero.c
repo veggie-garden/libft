@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 14:53:22 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/14 04:47:44 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/14 09:18:21 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
-	char			*dest;
+	size_t	i;
+	char	*dest;
 
 	i = 0;
 	dest = (char *)s;
