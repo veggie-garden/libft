@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 13:27:13 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/08 13:29:40 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/17 22:45:16 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	int	i;
-	int	n;
+	size_t	i;
+	size_t	n;
 
 	i = 0;
 	n = 0;
