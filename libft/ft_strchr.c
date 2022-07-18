@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 12:02:15 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/18 19:49:14 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 20:21:37 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + i);
 		i++;
 	}
-	if (s[i] == c)
+	if ((unsigned char)s[i] == (unsigned char)c)
 		return ((char *)s + i);
 	return (NULL);
 }

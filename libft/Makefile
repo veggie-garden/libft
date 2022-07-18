@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+         #
+#    By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/14 07:51:47 by cheseo            #+#    #+#              #
-#    Updated: 2022/07/14 08:18:31 by cheseo           ###   ########.fr        #
+#    Updated: 2022/07/18 20:05:32 by cheseo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,11 +36,11 @@ SRCS =  ft_isalpha.c \
 		ft_memcmp.c \
 		ft_strnstr.c \
 		ft_atoi.c \
-		# ft_calloc.c \
-		# ft_strdup.c \
-		# ft_substr.c \
-		# ft_strjoin.c \
-		# ft_strtrim.c \
+		ft_calloc.c \
+		ft_strdup.c \
+		ft_substr.c \
+		ft_strjoin.c \
+		ft_strtrim.c \
 		# ft_split.c \
 		# ft_itoa.c \
 		# ft_strmapi.c \

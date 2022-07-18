@@ -6,23 +6,23 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 23:00:44 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/18 09:29:42 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 20:06:17 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-/*
+
 char	**ft_split(char const *s, char c)
 {
-	size_t	i;
+	// size_t	i;
 
-	i = 0;
-	while (s[i])
-	{
-		if (ft_strchr(&s[i], c))
-		{
+	// i = 0;
+	// while (s[i])
+	// {
+	// 	if (ft_strchr(&s[i], c))
+	// 	{
 			
-		}
-	}
-}*/
+	// 	}
+	// }
+}

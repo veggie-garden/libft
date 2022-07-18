@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 21:56:13 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/18 09:30:02 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 20:37:44 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
+	size_t	j;
 	size_t	len1;
 	size_t	len2;
 	char	*tmp;
 
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	tmp = (sizeof(char) * (len1 + len2 + 1));
+	tmp = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (!tmp)
 		return (NULL);
 	i = 0;
@@ -31,10 +32,13 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		tmp[i] = s1[i];
 		i++;
 	}
-	while (i < len2)
+	j = 0;
+	while (i < (len1 + len2))
 	{
-		tmp[i] = s2[i];
+		tmp[i] = s2[j];
 		i++;
+		j++;
 	}
+	tmp[i] = '\0';
 	return (tmp);
 }

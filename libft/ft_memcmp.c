@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 21:03:58 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/18 19:51:22 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 19:52:47 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-// #include <string.h>
-
-// int main(void)
-// {
-// 	char *s1 = "t\200";
-// 	char *s2 = "t\0";
-// 	size_t size = 2;
-// 	printf("%d\n", ft_memcmp(s1, s2, size));
-// 	printf("%d\n", memcmp(s1, s2, size));
-// }
