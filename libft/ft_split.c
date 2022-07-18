@@ -6,13 +6,13 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 23:00:44 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/17 23:00:44 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 09:29:42 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
+/*
 char	**ft_split(char const *s, char c)
 {
 	size_t	i;
@@ -25,4 +25,4 @@ char	**ft_split(char const *s, char c)
 			
 		}
 	}
-}
+}*/

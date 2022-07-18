@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 17:59:47 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/14 10:52:49 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 09:28:42 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	tmp = (unsigned char *)dst;
 	str = (unsigned char const *)src;
-	if (!dst)
-		return (0);
 	if (!n || dst == src)
 		return (dst);
 	while (i < n)

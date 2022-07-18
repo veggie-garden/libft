@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 09:22:32 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/14 10:58:25 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 11:59:05 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,19 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	j;
+	size_t	dst_len;
+	size_t	src_len;
 
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (dstsize < dst_len + 1)
+		return (dstsize + src_len);
 	i = 0;
-	j = 0;
-	while (dst[i])
-		i++;
-	while (src[j] && i + 1 < dstsize)
+	while (src[i] && (i + dst_len + 1) < dstsize)
 	{
-		dst[i] = src[j];
+		dst[dst_len + i] = src[i];
 		i++;
-		j++;
 	}
-	if (dstsize < i)
-		i = dstsize;
-	while (src[j])
-		j++;
-	dst[i] = '\0';
-	return (i + j);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }

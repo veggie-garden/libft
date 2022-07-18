@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 13:39:30 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/17 21:55:41 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 09:30:52 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	return (tmp);
 }
+

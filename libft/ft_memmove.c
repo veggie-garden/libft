@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cheseo <cheseo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/11 16:53:56 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/14 10:53:23 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 11:43:55 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,24 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t		i;
-	size_t		j;
 	char		*tmp;
 	char const	*str;
 
 	i = 0;
-	j = 0;
 	tmp = dst;
 	str = src;
-	if (!dst || !src)
-		return (dst);
-	while (tmp[j])
-		j++;
-	while (i < len)
+	if (!dst && !src)
+		return (NULL);
+	if (src < dst)
+		while (len-- > 0)
+			tmp[len] = str[len];
+	else
 	{
-		tmp[j] = str[i];
-		i++;
-		j++;
+		while (i < len)
+		{
+			tmp[i] = str[i];
+			i++;
+		}
 	}
 	return (dst);
 }

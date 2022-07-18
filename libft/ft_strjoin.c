@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 21:56:13 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/17 22:44:15 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/18 09:30:02 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		i;
-	size_t		len1;
-	size_t		len2;
+	size_t	i;
+	size_t	len1;
+	size_t	len2;
 	char	*tmp;
 
 	len1 = ft_strlen(s1);
