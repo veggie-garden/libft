@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/08 19:55:44 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/18 20:13:31 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/19 18:04:33 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-// char	**ft_split(char const *s, char c);
+char	**ft_split(char const *s, char c);
 // char	*ft_itoa(int n);
 // char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 // void	*ft_striteri(char *s, void (*f)(unsigned int, char *));

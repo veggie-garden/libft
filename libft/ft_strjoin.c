@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 21:56:13 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/18 20:37:44 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/19 16:22:54 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	j = 0;
 	while (i < (len1 + len2))
-	{
-		tmp[i] = s2[j];
-		i++;
-		j++;
-	}
+		tmp[i++] = s2[j++];
 	tmp[i] = '\0';
 	return (tmp);
 }
