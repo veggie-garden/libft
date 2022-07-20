@@ -6,7 +6,7 @@
 #    By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/14 07:51:47 by cheseo            #+#    #+#              #
-#    Updated: 2022/07/20 10:10:05 by cheseo           ###   ########.fr        #
+#    Updated: 2022/07/20 21:18:47 by cheseo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,38 +48,39 @@ SRCS =  ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c \
-# BONUS = ft_lstnew.c \
-		# ft_lstadd_front.c \
-		# ft_lstsize.c \
-		# ft_lstlast.c \
-		# ft_lstadd_back.c \
-		# ft_lstdelone.c \
-		# ft_lstclear.c \
-		# ft_lstiter.c \
-		# ft_lstmap.c \
+		ft_putnbr_fd.c
+BONUS_SRCS = ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
+B_OBJS = $(BONUS_SRCS:.c=.o)
 
 %.o : %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(NAME) : $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	$(AR) $(NAME) $(OBJS) $(B_OBJS)
 
 all : $(NAME)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(B_OBJS)
 
 fclean:
-	rm -f $(OBJS) $(NAME)
+	rm -f $(OBJS) $(B_OBJS) $(NAME)
 
 re: 
 	make fclean
 	make all
 
-bonus:
-	$(MAKE) WITH_BONUS=1 all
+bonus: $(B_OBJS) $(OBJS)
+	$(AR) $(NAME) $?
 
 .PHONY : re all clean fclean bonus

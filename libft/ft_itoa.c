@@ -6,14 +6,14 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:37:07 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 13:54:06 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/20 17:32:02 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	ft_intlen(long nbr)
+static size_t	ft_intlen(long nbr)
 {
 	size_t	len;
 
@@ -58,11 +58,4 @@ char	*ft_itoa(int n)
 		nbr /= 10;
 	}
 	return (str);
-}
-
-#include <stdio.h>
-
-int main(void)
-{
-	printf("%s\n", ft_itoa(19));
 }
