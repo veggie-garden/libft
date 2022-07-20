@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 23:00:44 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/19 19:44:38 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/20 09:15:17 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,16 +96,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (res);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char *s = "hello!";
-//  	char **result = ft_split("hello!", ' ');
-// 	int i = 0;
-// 	while (result[i])
-// 	{
-// 		printf("%s\n", result[i]);
-// 		i++;
-// 	}
-// }

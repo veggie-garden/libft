@@ -6,7 +6,7 @@
 #    By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/14 07:51:47 by cheseo            #+#    #+#              #
-#    Updated: 2022/07/19 18:04:40 by cheseo           ###   ########.fr        #
+#    Updated: 2022/07/20 10:10:05 by cheseo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,14 +42,14 @@ SRCS =  ft_isalpha.c \
 		ft_strjoin.c \
 		ft_strtrim.c \
 		ft_split.c \
-		# ft_itoa.c \
-		# ft_strmapi.c \
-		# ft_striteri.c \
-		# ft_puctchar_fd.c \
-		# ft_putstr_fd.c \
-		# ft_putendl_fd.c \
-		# ft_putnbr_fd.c \
-BONUS = # ft_lstnew.c \
+		ft_itoa.c \
+		ft_strmapi.c \
+		ft_striteri.c \
+		ft_putchar_fd.c \
+		ft_putstr_fd.c \
+		ft_putendl_fd.c \
+		ft_putnbr_fd.c \
+# BONUS = ft_lstnew.c \
 		# ft_lstadd_front.c \
 		# ft_lstsize.c \
 		# ft_lstlast.c \
