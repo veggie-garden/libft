@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 19:28:58 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 19:30:31 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/20 21:26:26 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst)
+	if (!lst)
+		return (NULL);
+	while (!lst->next)
 		lst = lst -> next;
 	return (lst);
 }
