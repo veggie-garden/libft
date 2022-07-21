@@ -6,39 +6,25 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 19:30:41 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 21:10:39 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/21 11:31:26 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// #include "libft.h"
-
-// void	ft_listadd_back(t_list **lst, t_list *new)
-// {
-// 	while (!((*lst)->next))
-// 		(*lst) = (*lst)->next;
-// 	(*lst)->next = new;
-// }
 
 #include "libft.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*res;
+	t_list	*tmp;
 
-	res = *lst;
-	if (*lst == NULL && new != NULL)
+	if (!lst || !new)
+		return ;
+	if (!(*lst))
 	{
 		*lst = new;
 		return ;
 	}
-	else if (lst == NULL || new == NULL)
-	{
-		return ;
-	}
-	while ((*lst)->next != NULL)
-	{
-		*lst = (*lst)->next;
-	}
-	(*lst)->next = new;
-	*lst = res;
+	tmp = *lst;
+	while (tmp->next != NULL)
+		tmp = tmp->next;
+	tmp->next = new;
 }

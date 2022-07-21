@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 19:26:19 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 19:29:32 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/21 10:40:02 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 	len = 0;
 	while (lst)
 	{
-		lst = lst -> next;
+		lst = lst->next;
 		len++;
 	}
 	return (len);
