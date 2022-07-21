@@ -6,13 +6,13 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 17:19:11 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 18:14:42 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/21 18:18:21 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-static size_t	ft_intpower(long nbr)
+static size_t	ft_intdigit(long nbr)
 {
 	size_t	len;
 
@@ -31,12 +31,12 @@ static size_t	ft_intpower(long nbr)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	power;
+	size_t	digit;
 	long	nbr;
 	char	c;
 
 	nbr = n;
-	power = ft_intpower(nbr);
+	digit = ft_intdigit(nbr);
 	if (nbr == 0)
 		write(fd, "0", 1);
 	else
@@ -46,12 +46,12 @@ void	ft_putnbr_fd(int n, int fd)
 			nbr *= -1;
 			write(fd, "-", 1);
 		}
-		while (power > 0)
+		while (digit > 0)
 		{
-			c = nbr / power + '0';
+			c = nbr / digit + '0';
 			write(fd, &c, 1);
-			nbr %= power;
-			power /= 10;
+			nbr %= digit;
+			digit /= 10;
 		}
 	}
 }

@@ -6,11 +6,10 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/17 23:00:44 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 09:15:17 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/21 18:18:52 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 static size_t	ft_count_word(char const *s, char c)

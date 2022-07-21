@@ -6,7 +6,7 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 20:27:02 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 20:35:12 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/21 17:42:22 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*node;
 
+	if (!lst || !f)
+		return ;
 	node = lst;
 	while (node)
 	{

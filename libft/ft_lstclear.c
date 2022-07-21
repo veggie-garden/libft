@@ -6,12 +6,11 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 20:17:31 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 21:05:07 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/21 18:13:39 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

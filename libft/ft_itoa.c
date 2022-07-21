@@ -6,11 +6,10 @@
 /*   By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 16:37:07 by cheseo            #+#    #+#             */
-/*   Updated: 2022/07/20 17:32:02 by cheseo           ###   ########.fr       */
+/*   Updated: 2022/07/21 18:16:24 by cheseo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <stdlib.h>
 
 static size_t	ft_intlen(long nbr)
