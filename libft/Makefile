@@ -6,7 +6,7 @@
 #    By: cheseo <cheseo@student.42seoul.kr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/14 07:51:47 by cheseo            #+#    #+#              #
-#    Updated: 2022/07/21 08:57:55 by cheseo           ###   ########.fr        #
+#    Updated: 2022/07/21 19:10:42 by cheseo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 INCS = ./libft.h
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-AR = ar rcus
+AR = ar rcs
 SRCS =  ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -49,26 +49,24 @@ SRCS =  ft_isalpha.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
-BONUS_SRCS = ft_lstnew.c \
-		ft_lstadd_front.c \
-		ft_lstsize.c \
-		ft_lstlast.c \
-		ft_lstadd_back.c \
-		ft_lstdelone.c \
-		ft_lstclear.c \
-		ft_lstiter.c \
-		ft_lstmap.c
-
 OBJS = $(SRCS:.c=.o)
+
+BONUS_SRCS = ft_lstnew.c \
+			ft_lstadd_front.c \
+			ft_lstsize.c \
+			ft_lstlast.c \
+			ft_lstadd_back.c \
+			ft_lstdelone.c \
+			ft_lstclear.c \
+			ft_lstiter.c \
+			ft_lstmap.c
 B_OBJS = $(BONUS_SRCS:.c=.o)
 
-%.o : %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
-
-$(NAME) : $(OBJS)
-	$(AR) $(NAME) $(OBJS) $(B_OBJS)
-
 all : $(NAME)
+bonus : $(NAME)
+
+$(NAME) : $(OBJS) $(if $(filter bonus,$(MAKECMDGOALS)), $(B_OBJS))
+	$(AR) $(NAME) $^
 
 clean:
 	rm -f $(OBJS) $(B_OBJS)
@@ -79,8 +77,5 @@ fclean:
 re: 
 	make fclean
 	make all
-
-bonus: $(B_OBJS) $(OBJS)
-	$(AR) $(NAME) $?
 
 .PHONY : re all clean fclean bonus
